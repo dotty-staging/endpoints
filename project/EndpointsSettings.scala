@@ -31,7 +31,8 @@ object EndpointsSettings {
             "-encoding",
             "UTF-8",
             "-unchecked",
-            "-language:implicitConversions,Scala2Compat"
+            "-language:implicitConversions",
+            "-source", "3.0-migration"
           )
       }
     },
