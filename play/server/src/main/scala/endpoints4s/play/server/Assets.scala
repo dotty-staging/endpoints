@@ -142,7 +142,7 @@ trait Assets extends algebra.Assets with EndpointsWithCustomErrors {
       invariantFunctorRequest
         .inmap( // TODO remove this boilerplate using play-products
           request(Get, url, headers = gzipSupport),
-          AssetRequest.tupled,
+          AssetRequest.apply.tupled,
           (assetRequest: AssetRequest) => (assetRequest.assetPath, assetRequest.isGzipSupported)
         )
 

@@ -103,7 +103,7 @@ trait Assets extends algebra.Assets with EndpointsWithCustomErrors {
             url,
             headers = requestHeadersSemigroupal.product(gzipSupport, ifModifiedSince)
           ),
-          AssetRequest.tupled,
+          AssetRequest.apply.tupled,
           (assetRequest: AssetRequest) =>
             (assetRequest.assetPath, assetRequest.isGzipSupported, assetRequest.ifModifiedSince)
         )
